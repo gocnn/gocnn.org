@@ -57,7 +57,7 @@
 	}
 
 	.error-title {
-		margin-top: -0rem;
+		margin-top: 0;
 		font-family: var(--font-family-title);
 		font-size: clamp(1.5rem, 5vw, 2rem);
 		font-weight: 700;

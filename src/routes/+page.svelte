@@ -6,23 +6,22 @@
 	const codeBlockClass =
 		'bg-warm-white border border-warm-light rounded-xl p-5 text-sm md:text-base overflow-x-auto font-mono shadow-sm';
 	const sectionClass = 'max-w-(--width-content) mx-auto px-5 py-12';
-	const pairClass = 'flex flex-col md:flex-row gap-10 items-center';
-</script>
+	</script>
 
 <svelte:head>
 	<title>GoCNN</title>
 	<meta
 		name="description"
-		content="GoCNN is an open-source organization building the deep learning ecosystem for Go — frameworks, inference engines, and GPU backends."
+		content="GoCNN is an open-source organization building the AI ecosystem for Go — ML frameworks, inference engines, and GPU backends."
 	/>
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="GoCNN — Deep Learning for Go" />
+	<meta property="og:title" content="GoCNN — AI Ecosystem for Go" />
 	<meta property="og:image" content="https://GoCNN.run/images/preview/site.png" />
 </svelte:head>
 
 <Header showLucy>
 	<p class="font-title text-2xl leading-tight md:text-4xl lg:text-5xl">
-		<b>AI</b> ecosystem for <b>Go</b>.
+		<b>GoCNN</b> — <b>AI</b> ecosystem for <b>Go</b>.
 	</p>
 	<a href="https://book.gocnn.org/" class="{btnClass} mt-8">Get Started</a>
 </Header>

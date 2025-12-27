@@ -4,19 +4,19 @@
 	const links = [
 		{ title: 'News', href: '/news' },
 		{ title: 'Code', href: 'https://github.com/gocnn' },
-		{ title: 'Cookbook', href: 'https://github.com/gocnn/book' },
+		{ title: 'Cookbook', href: 'https://book.gocnn.org' },
 		{ title: 'Documentation', href: '/documentation' },
-		{ title: 'Sponsor', href: 'https://github.com/sponsors/lpil' },
+		{ title: 'Sponsor', href: '/sponsor' },
 		{ title: 'Roadmap', href: '/roadmap' }
 	];
 
-	const linkClass = 'text-blacker no-underline hover:text-unexpected-aubergine transition-colors';
+	const linkClass = 'text-warm-dark no-underline hover:text-primary transition-colors';
 </script>
 
-<footer class="bg-white text-blacker py-10">
+<footer class="bg-warm-white text-warm-dark py-10">
 	<div class="max-w-(--width-content) mx-auto px-5">
 		<div class="flex flex-col md:flex-row justify-between gap-8">
-			<a href="/" class="flex items-center gap-2 no-underline text-blacker">
+			<a href="/" class="flex items-center gap-2 no-underline text-warm-dark">
 				<img alt="GoCNN logo" src="/images/gocnn.svg" class="size-12" />
 				<span class="text-4xl font-title">GoCNN</span>
 			</a>
