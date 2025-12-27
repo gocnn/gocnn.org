@@ -1,2 +1,76 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+
+/* GoCNN Theme - Fonts */
+
+@font-face {
+	font-family: 'Cascadia Mono';
+	font-display: swap;
+	src: url('/fonts/CascadiaMono.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Lexend';
+	font-display: swap;
+	font-weight: 400;
+	src: url('/fonts/Lexend.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Lexend';
+	font-display: swap;
+	font-weight: 700;
+	src: url('/fonts/Lexend-700.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Outfit';
+	font-display: swap;
+	src: url('/fonts/Outfit.woff') format('woff');
+}
+
+/* GoCNN Theme - Design Tokens */
+
+@theme {
+	/* Primary Colors */
+	--color-primary: #EE4C2C;
+	--color-primary-dark: #C73E24;
+	
+	/* Warm Backgrounds */
+	--color-warm-cream: #FFF8F5;
+	--color-warm-light: #FFF0EB;
+	--color-warm-white: #FFFCFA;
+	
+	/* Text Colors */
+	--color-warm-dark: #2D2A26;
+	--color-text-muted: #5C5552;
+	
+	/* Code Highlighting (warm-toned) */
+	--color-code-keyword: #D35400;
+	--color-code-function: #2980B9;
+	--color-code-string: #27AE60;
+	--color-code-text: #34495E;
+
+	/* Typography */
+	--font-family-normal: 'Outfit', sans-serif;
+	--font-family-title: 'Lexend', sans-serif;
+	--font-family-mono: 'Cascadia Mono', monospace;
+
+	/* Layout */
+	--width-content: 1200px;
+}
+
+/* Base Styles */
+
+body {
+	background-color: var(--color-warm-white);
+	color: var(--color-warm-dark);
+	font-family: var(--font-family-normal);
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-family-title);
+	font-weight: 400;
+}

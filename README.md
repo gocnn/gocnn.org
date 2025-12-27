@@ -1,6 +1,6 @@
-# Gocnn's Website
+# GoCNN's Website
 
-This is the official website for Gocnn, built with Svelte.
+This is the official website for GoCNN, built with Svelte.
 
 ## Developing
 
