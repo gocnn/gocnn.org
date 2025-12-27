@@ -2,11 +2,11 @@
 	import { Header } from '$lib';
 
 	const btnClass =
-		'inline-block px-8 py-3 bg-primary text-white rounded-full text-2xl no-underline hover:bg-primary-dark transition-colors';
+		'inline-block px-6 py-3 md:px-8 bg-primary text-white rounded-full text-xl md:text-2xl font-medium no-underline hover:bg-primary-dark hover:shadow-lg transition-all duration-200';
 	const codeBlockClass =
-		'bg-warm-white border border-warm-light rounded-xl p-5 text-sm md:text-base overflow-x-auto font-mono shadow-sm';
+		'bg-warm-white border border-warm-light rounded-2xl p-4 md:p-6 text-xs md:text-sm overflow-x-auto font-mono shadow-md';
 	const sectionClass = 'max-w-(--width-content) mx-auto px-5 py-12';
-	</script>
+</script>
 
 <svelte:head>
 	<title>GoCNN</title>
@@ -27,27 +27,42 @@
 </Header>
 
 <main>
-	<section class="{sectionClass} py-20">
-		<div class="grid items-center gap-12 md:grid-cols-2">
-			<div class="text-[22px]">
-				<h2 class="mb-8 text-4xl font-bold">Candy</h2>
+	<section class="{sectionClass} py-16 md:py-20">
+		<div class="grid items-start gap-10 lg:gap-16 lg:grid-cols-2">
+			<div>
+				<h2 class="mb-6 text-3xl md:text-4xl font-bold">Candy</h2>
 
-				<p class="mb-6 text-2xl leading-relaxed">Minimalist machine learning framework for Go.</p>
+				<p class="mb-4 text-xl md:text-2xl leading-relaxed">Minimalist machine learning framework for Go.</p>
 
-				<p class="mb-8 text-xl leading-relaxed">Multi-backend tensor acceleration:</p>
+				<p class="mb-6 text-lg md:text-xl leading-relaxed text-text-muted">Multi-backend tensor acceleration:</p>
 
-				<ul class="mb-10 list-disc space-y-3 pl-10 text-lg">
-					<li>CPU via BLAS (gomat with OpenBLAS or Intel MKL)</li>
-					<li>GPU NVIDIA via CUDA/cuBLAS/cuDNN (gocu bindings)</li>
-					<li>GPU Apple M-series via Metal (gomtl bindings)</li>
+				<ul class="mb-8 list-disc space-y-2 pl-6 text-base md:text-lg">
+					<li>
+						CPU via BLAS (<a
+							href="https://github.com/gocnn/gomat"
+							class="text-primary hover:underline">gomat</a
+						> with OpenBLAS or Intel MKL)
+					</li>
+					<li>
+						GPU NVIDIA via CUDA/cuBLAS/cuDNN (<a
+							href="https://github.com/gocnn/gocu"
+							class="text-primary hover:underline">gocu</a
+						> bindings)
+					</li>
+					<li>
+						GPU Apple M-series via Metal (<a
+							href="https://github.com/gocnn/gomtl"
+							class="text-primary hover:underline">gomtl</a
+						> bindings)
+					</li>
 				</ul>
 
-				<p class="mb-6 text-lg leading-relaxed">
+				<p class="mb-4 text-base md:text-lg leading-relaxed text-text-muted">
 					Core features include tensor operations, neural network layers, convolutions, flash
 					attention, and LLM support.
 				</p>
 
-				<p class="text-lg leading-relaxed">
+				<p class="text-base md:text-lg leading-relaxed text-text-muted">
 					Leverages Go's native concurrency, concise syntax, and runtime efficiency for
 					high-performance training and inference.
 				</p>
@@ -79,30 +94,13 @@
 		</div>
 	</section>
 
-	<!-- <section class="bg-warm-light py-8 text-center text-warm-dark">
-		<div class="mx-auto max-w-(--width-content) px-5">
-			<h2 class="mb-4 text-2xl">Kindly supported by</h2>
-			<a
-				href="https://github.com/sponsors/lpil"
-				class="text-xl text-warm-dark no-underline transition-colors hover:text-primary"
-			>
-				sponsors like you!
-			</a>
-		</div>
-	</section> -->
-
 	<section
-		class="py-16 text-center text-warm-dark"
-		style="background: linear-gradient(180deg, var(--color-warm-light) 0%, var(--color-warm-white) 100%);"
+		class="py-12 md:py-16 text-center text-warm-dark bg-linear-to-b from-warm-light to-warm-white"
 	>
 		<div class="mx-auto max-w-(--width-content) px-5">
-			<h2 class="mb-4 text-4xl">Still here?</h2>
-			<p class="mb-2 text-2xl">Why not start now?</p>
-			<p class="mb-8 text-xl opacity-80">
-				For a guided experience, the
-				<a href="https://book.gocnn.org/" class="text-primary no-underline hover:underline"
-					>cookbook</a
-				> is a great place to start.
+			<h2 class="mb-3 text-3xl md:text-4xl">Ready to build?</h2>
+			<p class="mb-6 text-lg md:text-xl text-text-muted">
+				Explore the <a href="https://book.gocnn.org/" class="text-primary hover:underline">cookbook</a> for tutorials and examples.
 			</p>
 			<a href="https://book.gocnn.org/" class={btnClass}>Let's go!</a>
 		</div>
