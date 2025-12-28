@@ -7,6 +7,12 @@
 			desc: 'GoCNN discussions on GitHub',
 			href: 'https://github.com/orgs/gocnn/discussions',
 			icon: '/images/community/github.svg'
+		},
+		{
+			name: 'Discord',
+			desc: 'Join the GoCNN Discord server',
+			href: 'https://discord.gg/GGzEjFGdpx',
+			icon: '/images/community/discord.svg'
 		}
 	];
 
