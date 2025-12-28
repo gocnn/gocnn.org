@@ -10,7 +10,7 @@ We’re announcing GoCNN as an open-source organization focused on building the 
 
 ## What is GoCNN?
 
-GoCNN is a community and a set of projects that aim to make AI in Go more usable in real codebases. The Candy framework is one of the flagship efforts, targeting convolutional neural networks and the surrounding workflow (building, training, inference, and integration).
+GoCNN is a community and a set of projects that aim to make AI in Go more usable in real codebases.
 
 - **Golang-native** - APIs that feel like Go, designed for maintainable systems
 - **Ecosystem-oriented** - Not just a library: examples, conventions, and tooling
