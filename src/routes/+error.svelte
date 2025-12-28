@@ -9,7 +9,7 @@
 
 <div class="error-page">
 	<NavBar />
-	
+
 	<div class="error-content">
 		<span class="error-code">{$page.status}</span>
 		<h1 class="error-title">
@@ -81,7 +81,9 @@
 		background-color: var(--color-primary);
 		border-radius: 9999px;
 		text-decoration: none;
-		transition: background-color 0.2s, transform 0.2s;
+		transition:
+			background-color 0.2s,
+			transform 0.2s;
 	}
 
 	.error-link:hover {

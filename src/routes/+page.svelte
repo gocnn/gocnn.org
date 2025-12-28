@@ -28,13 +28,17 @@
 
 <main>
 	<section class="{sectionClass} py-16 md:py-20">
-		<div class="grid items-start gap-10 lg:gap-16 lg:grid-cols-2">
+		<div class="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
 			<div>
-				<h2 class="mb-6 text-3xl md:text-4xl font-bold">Candy</h2>
+				<h2 class="mb-6 text-3xl font-bold md:text-4xl">Candy</h2>
 
-				<p class="mb-4 text-xl md:text-2xl leading-relaxed">Minimalist machine learning framework for Go.</p>
+				<p class="mb-4 text-xl leading-relaxed md:text-2xl">
+					Minimalist machine learning framework for Go.
+				</p>
 
-				<p class="mb-6 text-lg md:text-xl leading-relaxed text-text-muted">Multi-backend tensor acceleration:</p>
+				<p class="mb-6 text-lg leading-relaxed text-text-muted md:text-xl">
+					Multi-backend tensor acceleration:
+				</p>
 
 				<ul class="mb-8 list-disc space-y-2 pl-6 text-base md:text-lg">
 					<li>
@@ -57,12 +61,12 @@
 					</li>
 				</ul>
 
-				<p class="mb-4 text-base md:text-lg leading-relaxed text-text-muted">
+				<p class="mb-4 text-base leading-relaxed text-text-muted md:text-lg">
 					Core features include tensor operations, neural network layers, convolutions, flash
 					attention, and LLM support.
 				</p>
 
-				<p class="text-base md:text-lg leading-relaxed text-text-muted">
+				<p class="text-base leading-relaxed text-text-muted md:text-lg">
 					Leverages Go's native concurrency, concise syntax, and runtime efficiency for
 					high-performance training and inference.
 				</p>
@@ -95,12 +99,14 @@
 	</section>
 
 	<section
-		class="py-12 md:py-16 text-center text-warm-dark bg-linear-to-b from-warm-light to-warm-white"
+		class="bg-linear-to-b from-warm-light to-warm-white py-12 text-center text-warm-dark md:py-16"
 	>
 		<div class="mx-auto max-w-(--width-content) px-5">
 			<h2 class="mb-3 text-3xl md:text-4xl">Ready to build?</h2>
-			<p class="mb-6 text-lg md:text-xl text-text-muted">
-				Explore the <a href="https://book.gocnn.org/" class="text-primary hover:underline">cookbook</a> for tutorials and examples.
+			<p class="mb-6 text-lg text-text-muted md:text-xl">
+				Explore the <a href="https://book.gocnn.org/" class="text-primary hover:underline"
+					>cookbook</a
+				> for tutorials and examples.
 			</p>
 			<a href="https://book.gocnn.org/" class={btnClass}>Let's go!</a>
 		</div>

@@ -7,10 +7,10 @@
 </svelte:head>
 
 <Header>
-	<h1 class="text-4xl font-title">Projects</h1>
-	<p class="text-xl mt-4">Coming soon...</p>
+	<h1 class="font-title text-4xl">Projects</h1>
+	<p class="mt-4 text-xl">Coming soon...</p>
 </Header>
 
-<main class="max-w-(--width-content) mx-auto px-5 py-16 text-center">
+<main class="mx-auto max-w-(--width-content) px-5 py-16 text-center">
 	<p class="text-xl opacity-80">This page is under construction.</p>
 </main>

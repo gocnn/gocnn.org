@@ -7,15 +7,15 @@
 </svelte:head>
 
 <Header>
-	<h1 class="text-4xl font-title">Documentation</h1>
-	<p class="text-xl mt-4">Coming soon...</p>
+	<h1 class="font-title text-4xl">Documentation</h1>
+	<p class="mt-4 text-xl">Coming soon...</p>
 </Header>
 
-<main class="max-w-(--width-content) mx-auto px-5 py-16 text-center">
+<main class="mx-auto max-w-(--width-content) px-5 py-16 text-center">
 	<p class="text-xl opacity-80">This page is under construction.</p>
 
 	<section id="cheatsheets" class="mt-16">
-		<h2 class="text-2xl mb-4">Cheat Sheets</h2>
+		<h2 class="mb-4 text-2xl">Cheat Sheets</h2>
 		<p class="opacity-80">Coming soon...</p>
 	</section>
 </main>
