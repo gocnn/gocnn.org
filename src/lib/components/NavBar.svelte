@@ -1,5 +1,11 @@
 <script lang="ts">
-	const leftLinks = [
+	interface NavLink {
+		title: string;
+		href: string;
+		external?: boolean;
+	}
+
+	const leftLinks: NavLink[] = [
 		{ title: 'News', href: '/news' },
 		{ title: 'Projects', href: '/projects' },
 		{ title: 'Community', href: '/community' },
@@ -7,10 +13,10 @@
 		{ title: 'About', href: '/about' }
 	];
 
-	const rightLinks = [
-		{ title: 'Book', href: 'https://book.gocnn.org' },
+	const rightLinks: NavLink[] = [
+		{ title: 'Book', href: 'https://book.gocnn.org', external: true },
 		{ title: 'Docs', href: '/documentation' },
-		{ title: 'Code', href: 'https://github.com/gocnn' }
+		{ title: 'Code', href: 'https://github.com/gocnn', external: true }
 	];
 
 	const linkClass = 'no-underline text-warm-dark hover:text-primary transition-colors';
@@ -26,14 +32,19 @@
 		</a>
 
 		<div class="flex gap-6">
-			{#each leftLinks as link}
+			{#each leftLinks as link (link.href)}
 				<a href={link.href} class={linkClass}>{link.title}</a>
 			{/each}
 		</div>
 
 		<div class="flex gap-6">
-			{#each rightLinks as link}
-				<a href={link.href} class={linkClass}>{link.title}</a>
+			{#each rightLinks as link (link.href)}
+				<a
+					href={link.href}
+					class={linkClass}
+					target={link.external ? '_blank' : undefined}
+					rel={link.external ? 'noopener noreferrer' : undefined}>{link.title}</a
+				>
 			{/each}
 		</div>
 	</div>

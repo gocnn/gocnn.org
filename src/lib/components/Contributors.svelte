@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-
 	interface Props {
 		repo?: string;
 		max?: number;
@@ -13,24 +11,35 @@
 		contributions: number;
 	}
 
-	let { repo = 'gleam-lang/gleam', max = 30 }: Props = $props();
+	let { repo = 'gocnn/candy', max = 30 }: Props = $props();
 
 	let contributors: Contributor[] = $state([]);
 	let loading = $state(true);
 	let error = $state<string | null>(null);
 
-	onMount(async () => {
-		try {
-			const res = await fetch(
-				`https://api.github.com/repos/${repo}/contributors?per_page=${max}`
-			);
-			if (!res.ok) throw new Error('Failed to fetch contributors');
-			contributors = await res.json();
-		} catch (e) {
-			error = e instanceof Error ? e.message : 'Unknown error';
-		} finally {
-			loading = false;
-		}
+	$effect(() => {
+		const controller = new AbortController();
+
+		fetch(`https://api.github.com/repos/${repo}/contributors?per_page=${max}`, {
+			signal: controller.signal
+		})
+			.then((res) => {
+				if (!res.ok) throw new Error('Failed to fetch contributors');
+				return res.json();
+			})
+			.then((data) => {
+				contributors = data;
+			})
+			.catch((e) => {
+				if (e.name !== 'AbortError') {
+					error = e instanceof Error ? e.message : 'Unknown error';
+				}
+			})
+			.finally(() => {
+				loading = false;
+			});
+
+		return () => controller.abort();
 	});
 </script>
 
@@ -41,7 +50,7 @@
 		<p class="text-center text-red-500">{error}</p>
 	{:else}
 		<div class="flex flex-wrap justify-center gap-3">
-			{#each contributors as contributor}
+			{#each contributors as contributor (contributor.login)}
 				<a
 					href={contributor.html_url}
 					target="_blank"
@@ -52,7 +61,7 @@
 					<img
 						src={contributor.avatar_url}
 						alt={contributor.login}
-						class="size-12 rounded-full border-2 border-transparent group-hover:border-primary transition-colors"
+						class="size-12 rounded-full border-2 border-transparent transition-colors group-hover:border-primary"
 					/>
 				</a>
 			{/each}

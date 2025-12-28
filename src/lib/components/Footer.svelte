@@ -1,10 +1,16 @@
 <script lang="ts">
 	const currentYear = new Date().getFullYear();
 
-	const links = [
+	interface FooterLink {
+		title: string;
+		href: string;
+		external?: boolean;
+	}
+
+	const links: FooterLink[] = [
 		{ title: 'News', href: '/news' },
-		{ title: 'Code', href: 'https://github.com/gocnn' },
-		{ title: 'Cookbook', href: 'https://book.gocnn.org' },
+		{ title: 'Code', href: 'https://github.com/gocnn', external: true },
+		{ title: 'Cookbook', href: 'https://book.gocnn.org', external: true },
 		{ title: 'Documentation', href: '/documentation' },
 		{ title: 'Sponsor', href: '/sponsor' },
 		{ title: 'Roadmap', href: '/roadmap' }
@@ -22,16 +28,26 @@
 			</a>
 
 			<ul class="m-0 grid list-none grid-cols-2 gap-x-10 gap-y-2 p-0 md:grid-cols-3">
-				{#each links as link}
+				{#each links as link (link.href)}
 					<li>
-						<a href={link.href} class={linkClass}>{link.title}</a>
+						<a
+							href={link.href}
+							class={linkClass}
+							target={link.external ? '_blank' : undefined}
+							rel={link.external ? 'noopener noreferrer' : undefined}>{link.title}</a
+						>
 					</li>
 				{/each}
 			</ul>
 
 			<div class="text-sm opacity-70">
 				<p>© {currentYear} GoCNN</p>
-				<a href="https://github.com/gocnn/.github/blob/main/CODE_OF_CONDUCT.md" class={linkClass}>
+				<a
+					href="https://github.com/gocnn/.github/blob/main/CODE_OF_CONDUCT.md"
+					class={linkClass}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					Code of conduct
 				</a>
 			</div>

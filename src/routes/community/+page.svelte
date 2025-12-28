@@ -33,7 +33,7 @@
 		</p>
 
 		<ul class="my-10 flex list-none flex-wrap justify-center gap-8 p-0">
-			{#each socials as social}
+			{#each socials as social (social.name)}
 				<li class="group">
 					<a
 						href={social.href}

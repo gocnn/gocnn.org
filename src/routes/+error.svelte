@@ -1,29 +1,29 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { NavBar } from '$lib';
 </script>
 
 <svelte:head>
-	<title>{$page.status} | GoCNN</title>
+	<title>{page.status} | GoCNN</title>
 </svelte:head>
 
 <div class="error-page">
 	<NavBar />
 
 	<div class="error-content">
-		<span class="error-code">{$page.status}</span>
+		<span class="error-code">{page.status}</span>
 		<h1 class="error-title">
-			{#if $page.status === 404}
+			{#if page.status === 404}
 				Page Not Found
 			{:else}
 				Something Went Wrong
 			{/if}
 		</h1>
 		<p class="error-message">
-			{#if $page.status === 404}
+			{#if page.status === 404}
 				The page you're looking for doesn't exist or has been moved.
 			{:else}
-				{$page.error?.message || 'An unexpected error occurred.'}
+				{page.error?.message || 'An unexpected error occurred.'}
 			{/if}
 		</p>
 		<a href="/" class="error-link">Back to Home</a>

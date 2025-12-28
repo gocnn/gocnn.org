@@ -6,17 +6,17 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const config = {
 	// Consult https://svelte.dev/docs/kit/integrations
 	// for more information about preprocessors
-	preprocess: [vitePreprocess(), mdsvex()],
+	preprocess: [vitePreprocess(), mdsvex({ extensions: ['.md', '.svx'] })],
 
 	kit: {
 		adapter: adapter({
 			fallback: '404.html'
 		}),
 		paths: {
-			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH ?? ''
+			base: process.argv.includes('dev') ? '' : (process.env.BASE_PATH ?? '')
 		}
 	},
-	extensions: ['.svelte', '.svx']
+	extensions: ['.svelte', '.svx', '.md']
 };
 
 export default config;

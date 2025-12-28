@@ -102,8 +102,8 @@
 	<span class="text-code-string">"github.com/gocnn/candy/tensor"</span>
 )
 
-<span class="text-code-keyword">func</span> <span class="text-code-function">main</span
-					>() {'{'}{'\n'}	device := candy.CPU
+<span class="text-code-keyword">func</span> <span class="text-code-function">main</span>() &#123;
+	device := candy.CPU
 
 	a, _ := tensor.<span class="text-code-function">RandN</span>[<span class="text-code-keyword"
 						>float32</span
@@ -114,7 +114,7 @@
 
 	c, _ := a.<span class="text-code-function">MatMul</span>(b)
 	fmt.<span class="text-code-function">Println</span>(c)
-{'}'}</code
+&#125;</code
 				></pre>
 		</div>
 	</section>
