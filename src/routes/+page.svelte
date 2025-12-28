@@ -65,19 +65,25 @@
 					<li>
 						CPU via BLAS (<a
 							href="https://github.com/gocnn/gomat"
-							class="text-primary hover:underline">gomat</a
+							class="text-primary hover:underline"
+							target="_blank"
+							rel="noopener noreferrer">gomat</a
 						> with OpenBLAS or Intel MKL)
 					</li>
 					<li>
 						GPU NVIDIA via CUDA/cuBLAS/cuDNN (<a
 							href="https://github.com/gocnn/gocu"
-							class="text-primary hover:underline">gocu</a
+							class="text-primary hover:underline"
+							target="_blank"
+							rel="noopener noreferrer">gocu</a
 						> bindings)
 					</li>
 					<li>
 						GPU Apple M-series via Metal (<a
 							href="https://github.com/gocnn/gomtl"
-							class="text-primary hover:underline">gomtl</a
+							class="text-primary hover:underline"
+							target="_blank"
+							rel="noopener noreferrer">gomtl</a
 						> bindings)
 					</li>
 				</ul>

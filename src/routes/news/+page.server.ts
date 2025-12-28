@@ -1,4 +1,4 @@
-import { getAllPosts } from '$lib/news';
+import { getAllPosts } from '$lib';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async () => {

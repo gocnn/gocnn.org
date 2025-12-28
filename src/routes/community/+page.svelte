@@ -27,7 +27,7 @@
 </Header>
 
 <main class="mx-auto max-w-(--width-content) px-5 py-16">
-	<article class="mx-auto prose max-w-3xl">
+	<article class="mx-auto max-w-3xl">
 		<p class="text-lg leading-relaxed">
 			You can talk to and get help from other GoCNN community members in the following forums:
 		</p>
@@ -57,7 +57,12 @@
 
 		<p class="text-lg leading-relaxed">
 			You can also follow the core developer ΣX on X to get the latest updates
-			<a href="https://x.com/gitctrlx" class="text-primary hover:underline">@gitctrlx</a>.
+			<a
+				href="https://x.com/gitctrlx"
+				class="text-primary hover:underline"
+				target="_blank"
+				rel="noopener noreferrer">@gitctrlx</a
+			>.
 		</p>
 
 		<h2 class="font-title mt-12 mb-4 text-2xl font-bold">Code of Conduct</h2>
@@ -65,7 +70,12 @@
 		<p class="text-lg leading-relaxed">
 			The GoCNN community is a space where we treat each other kindly and with respect. Please read
 			and adhere to our community
-			<a href={codeOfConductUrl} class="text-primary hover:underline">code of conduct</a>.
+			<a
+				href={codeOfConductUrl}
+				class="text-primary hover:underline"
+				target="_blank"
+				rel="noopener noreferrer">code of conduct</a
+			>.
 		</p>
 	</article>
 </main>

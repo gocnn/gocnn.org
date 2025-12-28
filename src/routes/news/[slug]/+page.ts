@@ -1,4 +1,4 @@
-import { getAllPosts } from '$lib/news';
+import { getAllPosts } from '$lib';
 import { error } from '@sveltejs/kit';
 import type { PageLoad, EntryGenerator } from './$types';
 
