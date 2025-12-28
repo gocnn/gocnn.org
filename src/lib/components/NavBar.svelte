@@ -3,7 +3,8 @@
 		{ title: 'News', href: '/news' },
 		{ title: 'Projects', href: '/projects' },
 		{ title: 'Community', href: '/community' },
-		{ title: 'Sponsor', href: '/sponsor' }
+		{ title: 'Sponsor', href: '/sponsor' },
+		{ title: 'About', href: '/about' }
 	];
 
 	const rightLinks = [
