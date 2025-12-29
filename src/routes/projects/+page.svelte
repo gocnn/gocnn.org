@@ -12,40 +12,40 @@
 	const projects: Project[] = [
 		{
 			name: 'Candy',
-			desc: 'Minimalist machine learning framework for Go with multi-backend tensor acceleration.',
+			desc: 'Minimalist ML framework for Go.',
 			href: 'https://github.com/gocnn/candy',
 			tags: ['ML', 'Tensor', 'Neural Networks'],
 			featured: true
 		},
 		{
-			name: 'gomat',
-			desc: 'Go bindings for BLAS libraries (OpenBLAS, Intel MKL) enabling high-performance CPU computation.',
-			href: 'https://github.com/gocnn/gomat',
-			tags: ['BLAS', 'CPU', 'Linear Algebra']
-		},
-		{
 			name: 'gocu',
-			desc: 'Go bindings for CUDA, cuBLAS, and cuDNN — GPU acceleration for NVIDIA hardware.',
+			desc: 'Go bindings for the CUDA Driver and Runtime APIs, cuBLAS, and cuDNN.',
 			href: 'https://github.com/gocnn/gocu',
 			tags: ['CUDA', 'NVIDIA', 'GPU']
 		},
 		{
-			name: 'gomtl',
-			desc: 'Go bindings for Apple Metal — GPU acceleration for M-series chips.',
-			href: 'https://github.com/gocnn/gomtl',
-			tags: ['Metal', 'Apple', 'GPU']
-		},
-		{
 			name: 'gym',
-			desc: 'Reinforcement learning environments and utilities for Go.',
+			desc: 'Go implementation of OpenAI Gym for reinforcement learning.',
 			href: 'https://github.com/gocnn/gym',
 			tags: ['RL', 'Environments', 'Training']
 		},
 		{
+			name: 'gomtl',
+			desc: 'Go bindings for Apple Metal.',
+			href: 'https://github.com/gocnn/gomtl',
+			tags: ['Metal', 'Apple', 'GPU']
+		},
+		{
 			name: 'half',
-			desc: 'Half-precision (float16) support for Go — memory-efficient tensor operations.',
+			desc: 'Half-precision floating point types float16 and bfloat16 for Go.',
 			href: 'https://github.com/gocnn/half',
 			tags: ['float16', 'Precision', 'Memory']
+		},
+		{
+			name: 'gomat',
+			desc: 'High-performance Go BLAS/LAPACK.',
+			href: 'https://github.com/gocnn/gomat',
+			tags: ['BLAS', 'CPU', 'Linear Algebra']
 		}
 	];
 </script>
