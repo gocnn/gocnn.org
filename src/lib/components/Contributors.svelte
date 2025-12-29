@@ -23,12 +23,22 @@
 		fetch(`https://api.github.com/repos/${repo}/contributors?per_page=${max}`, {
 			signal: controller.signal
 		})
-			.then((res) => {
-				if (!res.ok) throw new Error('Failed to fetch contributors');
+			.then(async (res) => {
+				if (!res.ok) {
+					if (res.status === 403) {
+						throw new Error('GitHub API rate limit exceeded. Try again later.');
+					}
+					if (res.status === 404) {
+						throw new Error(`Repository ${repo} not found.`);
+					}
+					throw new Error(`GitHub API error: ${res.status}`);
+				}
 				return res.json();
 			})
 			.then((data) => {
-				contributors = data;
+				if (Array.isArray(data)) {
+					contributors = data;
+				}
 			})
 			.catch((e) => {
 				if (e.name !== 'AbortError') {
