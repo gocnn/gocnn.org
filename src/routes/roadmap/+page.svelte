@@ -42,7 +42,7 @@
 			title: 'Inference & Interoperability',
 			items: [
 				{
-					title: 'GoONX',
+					title: 'ONNX Bindings',
 					description:
 						'ONNX ecosystem bindings for Go — load, run, and optimize ONNX models natively.',
 					status: 'planned',
@@ -71,7 +71,7 @@
 		},
 		{
 			phase: 'Phase 3',
-			title: 'Advanced AI',
+			title: 'Reinforcement Learning',
 			items: [
 				{
 					title: 'Sugar',
@@ -121,7 +121,7 @@
 			<!-- Phase header -->
 			<div class="relative mb-8 md:text-center">
 				<span
-					class="relative z-10 inline-block rounded-full bg-primary px-4 py-2 text-sm font-bold text-white shadow-lg md:mx-auto"
+					class="relative z-10 inline-block rounded-full bg-primary px-4 py-2 text-sm font-medium text-white shadow-lg md:mx-auto"
 				>
 					{milestone.phase}: {milestone.title}
 				</span>
@@ -129,8 +129,10 @@
 
 			<!-- Items -->
 			{#each milestone.items as item, j (item.title)}
+				{@const globalIndex =
+					milestones.slice(0, i).reduce((acc, m) => acc + m.items.length, 0) + j}
 				<div
-					class="relative mb-12 md:mb-16 md:flex {(i + j) % 2 === 0
+					class="relative mb-12 md:mb-16 md:flex {globalIndex % 2 === 0
 						? 'md:flex-row'
 						: 'md:flex-row-reverse'}"
 				>
@@ -140,7 +142,7 @@
 					></div>
 
 					<!-- Content card -->
-					<div class="ml-12 md:ml-0 md:w-1/2 {(i + j) % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}">
+					<div class="ml-12 md:ml-0 md:w-1/2 {globalIndex % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}">
 						<div
 							class="rounded-2xl border border-warm-light bg-warm-white p-6 shadow-sm transition-shadow hover:shadow-md"
 						>
