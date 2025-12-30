@@ -18,28 +18,28 @@
 			featured: true
 		},
 		{
-			name: 'gocu',
-			desc: 'Go bindings for the CUDA Driver and Runtime APIs, cuBLAS, and cuDNN.',
-			href: 'https://github.com/gocnn/gocu',
-			tags: ['CUDA', 'NVIDIA', 'GPU']
-		},
-		{
 			name: 'gym',
 			desc: 'Go implementation of OpenAI Gym for reinforcement learning.',
 			href: 'https://github.com/gocnn/gym',
 			tags: ['RL', 'Environments', 'Training']
 		},
 		{
-			name: 'gomtl',
-			desc: 'Go bindings for Apple Metal.',
-			href: 'https://github.com/gocnn/gomtl',
-			tags: ['Metal', 'Apple', 'GPU']
-		},
-		{
 			name: 'half',
 			desc: 'Half-precision floating point types float16 and bfloat16 for Go.',
 			href: 'https://github.com/gocnn/half',
 			tags: ['float16', 'Precision', 'Memory']
+		},
+		{
+			name: 'gocu',
+			desc: 'Go bindings for the CUDA Driver and Runtime APIs, cuBLAS, and cuDNN.',
+			href: 'https://github.com/gocnn/gocu',
+			tags: ['CUDA', 'NVIDIA', 'GPU']
+		},
+		{
+			name: 'gomtl',
+			desc: 'Go bindings for Apple Metal.',
+			href: 'https://github.com/gocnn/gomtl',
+			tags: ['Metal', 'Apple', 'GPU']
 		},
 		{
 			name: 'gomat',
