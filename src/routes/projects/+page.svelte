@@ -11,7 +11,7 @@
 
 	const projects: Project[] = [
 		{
-			name: 'Candy',
+			name: 'candy',
 			desc: 'Minimalist ML framework for Go.',
 			href: 'https://github.com/gocnn/candy',
 			tags: ['ML', 'Tensor', 'Neural Networks'],
